@@ -1,0 +1,5 @@
+[{$smarty.block.parent}]
+[{* ----- include 360°-view ----- *}]
+[{assign var="width" value="260"}]
+[{oxscript add=$oDetailsProduct->getArticleReel($oDetailsProduct->oxarticles__oxid->value, $width) priority=10}]
+[{oxscript include=$oViewConf->getModuleUrl("article_reel_frontend", "out/src/jquery.reel.js")}]
